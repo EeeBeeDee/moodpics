@@ -1,0 +1,72 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    // display: none;
+    &__waves {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+       
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient( to right, #F5DAF4,#E07DEB);
+        // #F5DAF4
+        opacity: 0.8;
+        z-index: 10;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0,0.4);
+        // #F5DAF4
+        
+        z-index: 11;
+    }
+ 
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    [class^="hero__text"] {
+        background-image: linear-gradient(to right, #404040, #000 );
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        z-index: 1000;
+        font-size: 4rem;
+        margin-bottom: 2.5rem;
+    }
+    
+   
+    &__text2 {
+        margin-left: 8rem;
+        background-size: 150%;
+        background-image: linear-gradient(to right, #404040, #404040 );
+    }
+    
+    #text3 {
+        background-image: linear-gradient(to right, #000, #404040 );
+        margin-left: 5rem;
+        
+    }
+}
