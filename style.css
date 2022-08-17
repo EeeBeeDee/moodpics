@@ -4,7 +4,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 html {
   font-size: 62.5%;
@@ -13,8 +13,7 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  line-height: 1.7;
-  overflow-x: hidden; }
+  line-height: 1.7; }
 
 .filler {
   width: 100%;
@@ -23,7 +22,7 @@ body {
 
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   position: relative; }
   .hero__waves {
     margin: 0;
@@ -38,7 +37,7 @@ body {
     display: inline-block;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #F5DAF4, #E07DEB);
+    background: linear-gradient(to right, #E2DCE9, #E07DEB);
     opacity: 0.8;
     z-index: 10; }
   .hero::before {
@@ -67,13 +66,13 @@ body {
   .hero__text2 {
     margin-left: 8rem;
     background-size: 150%;
-    background-image: linear-gradient(to right, #404040, #404040); }
+    background-image: linear-gradient(to right, #404040, #000); }
   .hero #text3 {
     background-image: linear-gradient(to right, #000, #404040);
     margin-left: 5rem; }
 
 .nav {
-  width: 100vw;
+  width: 100%;
   height: 10rem;
   background-color: #E2DCE9;
   display: flex;
@@ -102,7 +101,8 @@ body {
     border-radius: 50%;
     border: none;
     z-index: 1000;
-    box-shadow: 0 0 3rem #e2dce9; }
+    box-shadow: 0 0 3rem #e2dce9;
+    z-index: 100; }
   .nav__burgerline, .nav__burgerline::after, .nav__burgerline::before {
     position: absolute;
     top: 50%;
@@ -132,6 +132,7 @@ body {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
+    z-index: 100;
     position: relative; }
   .nav__burger-checkbox {
     display: none; }
@@ -160,7 +161,7 @@ body {
     align-items: center;
     background-color: #E2DCE9;
     transform: translate(30%, -30%);
-    z-index: -10; }
+    z-index: 0; }
   .nav__link-list {
     list-style-type: none;
     width: 100%;
@@ -182,3 +183,12 @@ body {
     text-decoration: none;
     font-size: 2rem;
     color: #E07DEB; }
+
+.blog {
+  height: 50rem;
+  width: 100%;
+  padding: 2rem; }
+  .blog__container {
+    background-color: #E07DEB;
+    width: 100%;
+    height: 100%; }
